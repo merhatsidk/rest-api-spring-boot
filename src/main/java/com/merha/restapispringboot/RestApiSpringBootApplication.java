@@ -15,7 +15,7 @@ public class RestApiSpringBootApplication {
 
     @GetMapping("/")
     public String hello(){
-        return "welcome !!";
+        return "welcome, world !!";
     }
 
 }
