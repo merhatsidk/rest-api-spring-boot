@@ -33,7 +33,7 @@ public class LiveStreamRepository {
     }
 
     public LiveStream findById(String id) throws NullPointerException{
-         return  streams.stream().filter(s -> s.id().equals(id)).findFirst().orElseThrow(NullPointerException :: new);
+         return  streams.stream().filter(s -> s.id().equals(id)).findFirst().orElseThrow(() -> new NullPointerException("there is no LiveStream with this id"));
     }
 
     public void update(LiveStream stream, String id){
